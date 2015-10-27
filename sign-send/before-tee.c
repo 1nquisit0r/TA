@@ -1,4 +1,5 @@
 // Check your Scanf and Printf later
+// gcc -Wall prog.c -o prog -lcrypto -lssl  -lcurl
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -12,7 +13,6 @@
 #else
 #  include <openssl/md5.h>
 #endif
- // gcc -Wall prog.c -o prog -lcrypto -lssl  -lcurl
 char *str2md5(const char *str, int length) {
     int n;
     MD5_CTX c;
@@ -42,7 +42,7 @@ char *str2md5(const char *str, int length) {
 
     int main(int argc, char **argv) {
 //		
-		char user_name[100] = "ranjbar@gmail.com"; // Will be provided by SP sames as the nounce
+		char user_name[100] = "inquisitor@gmail.com"; // Will be provided by SP sames as the nounce
 		char postDataPass[100] = "pass=";
 		char postDataUser[100] = "&user=";
 		char stored_pass[100] = "hello";
